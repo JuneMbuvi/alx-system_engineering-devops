@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#displays a sentence an ifinite number of times an sleeps(2) between each iteration
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
