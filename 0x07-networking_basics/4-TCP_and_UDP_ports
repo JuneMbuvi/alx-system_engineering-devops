@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #displays the listening sockets and the PID & name of program it belongs to
-netstat -l
+netstat -lp
