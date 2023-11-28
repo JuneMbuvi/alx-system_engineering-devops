@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#uses  Apache to run on the container & to return a page using the following steps
+
+docker exec -it holbertonschool/265-0 /bin/bash
+
+cd /etc/apache2/
+
+vi sites-available/000-default.conf
+
+DocumentRoot /var/www/html
+
+cd /var/www/html
+echo "Hello Holberton" > index.html
+
+service apache2 restart
+
+exit
