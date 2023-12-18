@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#run the who am i command
+
+if [ "$#" -ne 1 ]; then
+	exit 1
+fi
+
+my_user=$1
+sudo -u "$my_user" whoami
