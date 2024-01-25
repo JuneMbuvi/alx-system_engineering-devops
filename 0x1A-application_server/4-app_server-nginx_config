@@ -12,6 +12,15 @@ server {
         location = /airbnb-onepage/ {
                 proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
         }
+        # Serve AirBnB_clone_v2/web_flask/6-number_odd_or_even
+        location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+                proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+        # Serve API from AirBnB_clone_v3
+        location /api {
+                proxy_pass http://127.0.0.1:5002/api;
+        }
 
         error_page 404 /404.html;
         location /404 {
